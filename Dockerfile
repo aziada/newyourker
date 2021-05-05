@@ -1,6 +1,5 @@
-FROM jupyter/pyspark-notebook
+FROM jupyter/pyspark-notebook:latest
 
 ADD NY.py .
 
-RUN pip install socket requests json
-CMD [ "spark-submit", "--num-executors 2" , "--driver-memory 4g" , " --executor-memory 6g",  "./NY.py" ]
+CMD [ "spark-submit", "./NY.py" ]
