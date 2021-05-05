@@ -1,4 +1,4 @@
-# newyourker
+# NewYorker
 1.	Initial load for all datasets 
 2.	Structure the datasets into dataframe
 3.	The first datasets, yelp_academic_dataset_business need to structure to a proper scheme.
