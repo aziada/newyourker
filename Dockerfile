@@ -2,9 +2,12 @@ FROM jupyter/pyspark-notebook:latest
 
 ADD NY.py .
 
-VOLUME ["/data/yelp_biz.json"]
-VOLUME ["/data/yelp_tip.json"]
-VOLUME ["/data/yelp_review.json"]
-VOLUME ["/data/yelp_checkin.json"]
+VOLUME ["/data/"]
+
+COPY yelp_biz.json yelp_tip.json yelp_review.json yelp_checkin.json yelp_user.json /data/
 
 CMD [ "spark-submit", "./NY.py" ]
+
+
+
+
