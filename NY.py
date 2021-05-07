@@ -24,11 +24,11 @@ StructField("state",StringType(),True)])
 
 
 # Reading data sources and dataframes building
-biz = spark.read.json('file:///./yelp_biz.json', schema)
-tip = spark.read.json('file:///./yelp_tip.json')
-rvw = spark.read.json('file:///./yelp_review.json')
-chk = spark.read.json('file:///./yelp_checkin.json')
-usr = spark.read.json('file:///./yelp_user.json')
+biz = spark.read.json('file:///data/yelp_biz.json', schema)
+tip = spark.read.json('file:///data/yelp_tip.json')
+rvw = spark.read.json('file:///data/yelp_review.json')
+chk = spark.read.json('file:///data/yelp_checkin.json')
+usr = spark.read.json('file:///data/yelp_user.json')
 
 hours = biz.select(col("hours.*"))
 attr = biz.select(col("attributes.*"))
